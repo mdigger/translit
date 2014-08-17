@@ -14,11 +14,12 @@ func ExampleRuTranslit() {
 		"чаЩА",
 	}
 	for _, text := range tests {
-		fmt.Println(translit.RuTranslit(text))
+		fmt.Println(translit.Ru(text))
 	}
 	// Output:
 	// Proverochnaja STROKA dlja transliteracii
 	// CHASCHA
 	// ChaScha
 	// Chascha
+	// chaSCHA
 }

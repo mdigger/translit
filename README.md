@@ -24,9 +24,9 @@ tests := []string{
 for _, text := range tests {
     fmt.Println(translit.Ru(text))
 }
-// Output:
 // Proverochnaja STROKA dlja transliteracii
 // CHASCHA
 // ChaScha
 // Chascha
+// chaSCHA
 ```
