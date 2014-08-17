@@ -12,28 +12,21 @@
 Для транслитерации русских букв в ней уже предусмотрен встроенный словарь. Для других языков вы можете задать свой. Все достаточно просто:
 
 ```go
-package translit_test
+import "github.com/mdigger/translit"
 
-import (
-    "fmt"
-    "github.com/mdigger/translit"
-)
-
-func ExampleRuTranslit() {
-    tests := []string{
-        "Проверочная СТРОКА для транслитерации",
-        "ЧАЩА",
-        "ЧаЩа",
-        "Чаща",
-        "чаЩА",
-    }
-    for _, text := range tests {
-        fmt.Println(translit.RuTranslit(text))
-    }
-    // Output:
-    // Proverochnaja STROKA dlja transliteracii
-    // CHASCHA
-    // ChaScha
-    // Chascha
+tests := []string{
+    "Проверочная СТРОКА для транслитерации",
+    "ЧАЩА",
+    "ЧаЩа",
+    "Чаща",
+    "чаЩА",
 }
+for _, text := range tests {
+    fmt.Println(translit.Ru(text))
+}
+// Output:
+// Proverochnaja STROKA dlja transliteracii
+// CHASCHA
+// ChaScha
+// Chascha
 ```

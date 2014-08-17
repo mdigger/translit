@@ -52,7 +52,7 @@ var RuTransiltMap = map[rune]string{
 	'я': "ja",
 }
 
-// Translit выполняет транслитерацию в строке по указанной таблице и возвращает новую строку с
+// Transliterate выполняет транслитерацию в строке по указанной таблице и возвращает новую строку с
 // результатом такого преобразования. Все символы, которые не указаны в таблице транслитерации,
 // останутся без изменения.
 //
@@ -66,7 +66,7 @@ var RuTransiltMap = map[rune]string{
 //
 // При желании, вы можете указать любую таблицу в качестве второго параметра при вызове функции,
 // по которой и будет выполнено данное преобразование.
-func Translit(text string, translitMap map[rune]string) string {
+func Transliterate(text string, translitMap map[rune]string) string {
 	var result bytes.Buffer
 	utf8text := utf8string.NewString(text)
 	length := utf8text.RuneCount()
@@ -94,7 +94,7 @@ func Translit(text string, translitMap map[rune]string) string {
 	return result.String()
 }
 
-// RuTranslit выполняет транслитерацию строки с учетом словаря для русской транслитерации.
-func RuTranslit(text string) string {
-	return Translit(text, RuTransiltMap)
+// Ru выполняет транслитерацию строки с учетом словаря для русской транслитерации.
+func Ru(text string) string {
+	return Transliterate(text, RuTransiltMap)
 }
