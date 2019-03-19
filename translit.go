@@ -36,7 +36,7 @@ package translit
 
 import (
 	"bytes"
-	"code.google.com/p/go.exp/utf8string"
+	"golang.org/x/exp/utf8string"
 	"strings"
 	"unicode"
 )
