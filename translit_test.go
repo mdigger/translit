@@ -2,6 +2,7 @@ package translit_test
 
 import (
 	"fmt"
+
 	"github.com/mdigger/translit"
 )
 
